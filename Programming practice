@@ -1,0 +1,21 @@
+***Example-1
+
+import 'dart:io'; // Importing 'dart:io' for input/output operations
+
+void main() {
+  List age = [];
+  int agenew = 0;
+  stdout.write(
+      "How many number of age you want to enter "); // Prompt user for input
+  int? intcount = int.parse(stdin.readLineSync()!);
+  for (int i = 0; i < intcount; i++) {
+    stdout.write("Enter age: "); // Prompt user for input
+    agenew = int.parse(stdin.readLineSync()!);
+    age.add(agenew);
+    agenew = 0;
+  }
+
+  for (int i = 0; i < age.length; i++) {
+    print('${age[i]}'); // Prints the entered input
+  }
+}
